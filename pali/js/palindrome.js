@@ -2,7 +2,11 @@
 
 //chiedo all'utente tramite prompt una parola o una frase
 
-const userInput = prompt('Enter a word or a phrase. Is it Palindrome?');
+let userInput = prompt('Enter a word or a phrase. Is it Palindrome?');
+
+// trasformo l'input in minuscolo per evitare errori durante il controllo
+
+userInput = userInput.toLowerCase();
 
 //stampo in console l'input utente
 
@@ -12,7 +16,7 @@ console.log('Word or phrase entered by the user:', userInput);
 
 function palindromeCheck(string) {
 
-    // rimuovo tutti gli spazi presenti nella frase
+    // FAIL SAFE IN CASO DI FRASE : rimuovo tutti gli spazi presenti
 
     string = string.replaceAll(' ', '');
 
