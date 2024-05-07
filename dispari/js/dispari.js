@@ -3,9 +3,27 @@
 /*L’utente sceglie pari o dispari 
 e inserisce un numero da 1 a 5.*/
 
-// definisco una variabile con il valore di un prompt che chiede pari o dispari pari/dispari
+// inizializzo due variabili per il controllo dell'input utente 
 
-const userEvenOddChoice = prompt('Do you choose even or odd?');
+let userEvenOddChoiceRaw;
+let userEvenOddChoice;
+
+// con un ciclo do while chiedo all'utente di scegliere tra pari e dispari e controllo che inserisca solo una delle due scelte
+
+do {
+    // chiedo all'utente pari o dispari
+    userEvenOddChoiceRaw = prompt('Do you choose even or odd?');
+
+    // formatto la scelta per uniformitá di sintassi
+    userEvenOddChoice = userEvenOddChoiceRaw.charAt(0).toUpperCase() + userEvenOddChoiceRaw.slice(1).toLowerCase();
+
+    // se l'utente inserisce qualcosa di diverso da pari o dispari lo segnalo con un alert
+    if (userEvenOddChoice !== 'Odd' && userEvenOddChoice !== 'Even') {
+        alert('ERROR! Enter even or odd!')
+    }
+
+    // continuo a chiedere finché non avrá inserito uno dei due valori richiesti
+} while (userEvenOddChoice !== 'Odd' && userEvenOddChoice !== 'Even');
 
 //  mostro in console e nel documento il contenuto di userChoice
 
