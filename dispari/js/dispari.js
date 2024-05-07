@@ -48,10 +48,7 @@ function randoNumberGenerator(min, max) {
     return Math.floor(Math.random() * (max) + min);
 }
 
-// invoco la funzione e imposto i valori
-randoNumberGenerator(1, 5);
-
-// creo una variabile e le assegno il risultato della funzione 
+// creo una variabile, imposto il range di valori e le assegno il risultato della funzione 
 const computerNumberChoice = randoNumberGenerator(1, 5);
 
 // stampo in console il risultato della randomizzazione
@@ -62,4 +59,25 @@ console.log('The computer number of choice is: ', computerNumberChoice);
 
 const sum = userNumberChoice + computerNumberChoice;
 
-console.log('The result is: ', sum);
+console.log('The sum of the numbers is: ', sum);
+
+
+/*Stabiliamo se la somma dei 
+due numeri è pari o dispari (usando una funzione)*/
+
+function evenOrOdd(number) {
+
+    // inizializzo la variabile result
+    let result;
+
+    // controllo pari o dispari
+    if (number % 2 === 0) {
+        result = 'Even';
+    } else {
+        result = 'Odd'
+    }
+    // ritorno il risultato del controllo
+    return result;
+}
+
+console.log('The outcome is: ', evenOrOdd(sum));
