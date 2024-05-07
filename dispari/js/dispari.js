@@ -1,6 +1,7 @@
 'use strict';
 
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+/*L’utente sceglie pari o dispari 
+e inserisce un numero da 1 a 5.*/
 
 // definisco una variabile con il valore di un prompt che chiede pari o dispari pari/dispari
 
@@ -38,6 +39,10 @@ do {
 console.log('The user number of choice is: ', userNumberChoice);
 
 
+/*Generiamo un numero random (sempre da 1 a 5) 
+per il computer (usando una funzione).*/
+
+
 // creo una funzione che dati due valori min e max mi restituisca un numero randomico generato tra questi due valori (inclusi)
 function randoNumberGenerator(min, max) {
     return Math.floor(Math.random() * (max) + min);
@@ -51,3 +56,10 @@ const computerNumberChoice = randoNumberGenerator(1, 5);
 
 // stampo in console il risultato della randomizzazione
 console.log('The computer number of choice is: ', computerNumberChoice);
+
+
+/* Sommiamo i due numeri */
+
+const sum = userNumberChoice + computerNumberChoice;
+
+console.log('The result is: ', sum);
