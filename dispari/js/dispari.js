@@ -21,17 +21,33 @@ do {
 
     // controllo che non inserisca qualcosa di diverso da un numero
     if (isNaN(userNumberChoice)) {
-        alert('ERROR! Enter a number');
+        alert('ERROR! Enter a number!');
         // controllo che non inserisca un numero decimale
     } else if (userNumberChoice % 1 !== 0) {
-        alert('ERROR! Enter an integer number');
+        alert('ERROR! Enter an integer number!');
         // controllo che non inserisca un numero non compreso tra 1 e 5
     } else if (userNumberChoice < 1 || userNumberChoice > 5) {
-        alert('ERROR! Enter a valid number');
+        alert('ERROR! Enter a valid number!');
     }
+
     // finché non rispetta tutte queste condizioni continuo a chiedere
 } while (userNumberChoice < 1 || userNumberChoice > 5 || isNaN(userNumberChoice) || userNumberChoice % 1 !== 0);
 
 // mostro in console e nel documento il contenuto di userChoice
 
 console.log('The user number of choice is: ', userNumberChoice);
+
+
+// creo una funzione che dati due valori min e max mi restituisca un numero randomico generato tra questi due valori (inclusi)
+function randoNumberGenerator(min, max) {
+    return Math.floor(Math.random() * (max) + min);
+}
+
+// invoco la funzione e imposto i valori
+randoNumberGenerator(1, 5);
+
+// creo una variabile e le assegno il risultato della funzione 
+const computerNumberChoice = randoNumberGenerator(1, 5);
+
+// stampo in console il risultato della randomizzazione
+console.log('The computer number of choice is: ', computerNumberChoice);
