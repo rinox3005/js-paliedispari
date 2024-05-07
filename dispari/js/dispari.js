@@ -80,4 +80,24 @@ function evenOrOdd(number) {
     return result;
 }
 
-console.log('The outcome is: ', evenOrOdd(sum));
+console.log('The resulting number is:', evenOrOdd(sum));
+
+
+/* Dichiariamo chi ha vinto. */
+
+// se il risultato é pari e l'ultente ha scelto pari, User Wins
+if (evenOrOdd(sum) === 'Even' && userEvenOddChoice === 'Even') {
+
+    console.log('Outcome: User Wins');
+
+    // se il risultato é dispari e l'ultente ha scelto dispari, User Wins
+} else if (evenOrOdd(sum) === 'Odd' && userEvenOddChoice === 'Odd') {
+
+    console.log('Outcome: User Wins');
+
+    // se nessuno dei casi precedenti si verifica allora, Computer Wins
+} else {
+
+    console.log('Outcome: Computer Wins');
+
+}
