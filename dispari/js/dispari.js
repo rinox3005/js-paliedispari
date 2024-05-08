@@ -85,17 +85,10 @@ due numeri è pari o dispari (usando una funzione)*/
 
 function evenOrOdd(number) {
 
-    // inizializzo la variabile result
-    let result;
-
     // controllo pari o dispari
-    if (number % 2 === 0) {
-        result = 'Even';
-    } else {
-        result = 'Odd'
-    }
-    // ritorno il risultato del controllo
-    return result;
+    if (number % 2 === 0) return 'Even';
+
+    return 'Odd';
 }
 
 console.log('The resulting number is:', evenOrOdd(sum));
@@ -104,12 +97,7 @@ console.log('The resulting number is:', evenOrOdd(sum));
 /* Dichiariamo chi ha vinto. */
 
 // se il risultato é pari e l'ultente ha scelto pari, User Wins
-if (evenOrOdd(sum) === 'Even' && userEvenOddChoice === 'Even') {
-
-    console.log('Outcome: User Wins');
-
-    // se il risultato é dispari e l'ultente ha scelto dispari, User Wins
-} else if (evenOrOdd(sum) === 'Odd' && userEvenOddChoice === 'Odd') {
+if (evenOrOdd(sum) === userEvenOddChoice) {
 
     console.log('Outcome: User Wins');
 
